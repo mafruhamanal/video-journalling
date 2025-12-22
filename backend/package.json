@@ -1,5 +1,6 @@
 {
   "name": "backend",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,10 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@libsql/client": "^0.15.15",
+    "drizzle-orm": "^0.45.1",
     "express": "^5.2.1"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.0.3"
+    "@types/node": "^25.0.3",
+    "drizzle-kit": "^0.31.8"
   }
 }
