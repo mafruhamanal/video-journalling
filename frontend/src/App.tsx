@@ -1,14 +1,33 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState("");
+
+  useEffect( () => {
+
+    const helper_name = async () => {
+
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/get`);
+
+      const result = await res.json();
+
+      setName(result.firstName);
+      
+      console.log(res);
+      
+    }
+
+    helper_name();
+
+  },  [])
 
   return (
     <>
-      <h1 className='text-3xl font-bold underline'>Vite + React</h1>
+      <h1 className='text-3xl font-bold underline'>My name is {name}</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+         Count is {count}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
