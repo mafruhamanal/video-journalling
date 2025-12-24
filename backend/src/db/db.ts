@@ -26,8 +26,8 @@ export const db = drizzle(sqlite, { schema });
 
 // console.log(result);
 
-const result = await db.query.users.findFirst()
-console.log(result)
+// const result = await db.query.users.findFirst()
+// console.log(result)
 // need to run migration for tables to exist w these things? 
 // to run migrations,  do npx drizzle-kit push in backend
 
