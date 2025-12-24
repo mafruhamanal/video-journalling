@@ -18,7 +18,7 @@ export const db = drizzle(sqlite, { schema });
 //     email: 'john.doe@example.com',
 // });
 
-// const result = await db.insert(schema.users).values( {
+// const result = await db.insert(schema.users).values( { // this WORKED
 //     firstName: 'Mafruha',
 //     lastName: 'Manal',
 //     email: 'mafruha.m@example.com',
@@ -29,4 +29,7 @@ export const db = drizzle(sqlite, { schema });
 const result = await db.query.users.findFirst()
 console.log(result)
 // need to run migration for tables to exist w these things? 
+// to run migrations,  do npx drizzle-kit push in backend
+
 // i also cd'd into backend then ran npx tsx ./src/db/db.ts  
+
