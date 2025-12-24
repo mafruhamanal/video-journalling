@@ -24,7 +24,7 @@ export const videos = sqliteTable(
     title: t.text().notNull(),
     description: t.text(),
     hlsPath: t.text("hls_path"),
-    filePath: t.text("thumbnail_path"),
+    filePath: t.text("file_path"),
     status: t.text().$type<"processing" | "ready" | "failed">(),
     duration: t.int(),
     createdAt: t.int("created_at").notNull().$default(Date.now),
