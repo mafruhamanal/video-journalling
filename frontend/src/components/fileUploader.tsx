@@ -22,8 +22,8 @@ function FileUploader() {
 
       <div className="max-w-2xl mx-auto px-4 py-12">
         <div className="mb-8">
-          <h2 className="text-xl font-normal mb-2">Upload Your Video</h2>
-          <p className="text-zinc-400 text-sm">Share your moment with the community</p>
+          <h2 className="text-xl font-normal mb-2">Upload Your Video Journal</h2>
+          <p className="text-zinc-400 text-sm">Share your video journal of the day</p>
         </div>
 
         <form
@@ -67,7 +67,7 @@ function FileUploader() {
 
           <TextInput
             label="Title"
-            placeholder="Enter your video title"
+            placeholder="Enter your journal title"
             key={form.key("title")}
             {...form.getInputProps("title")}
             classNames={{
